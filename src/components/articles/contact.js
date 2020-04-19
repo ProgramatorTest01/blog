@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navigation from "./../login/navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default class Contact extends Component {
@@ -117,7 +118,9 @@ export default class Contact extends Component {
             </div>
           </div>
         </section>
-        <footer>Artur &amp; Grzegorz 2020. Wszelkie prawa wyłączone :-)</footer>
+        <div>
+          <Footer />
+        </div>
       </Container>
     );
   }

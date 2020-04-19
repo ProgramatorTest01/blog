@@ -4,6 +4,7 @@ import Register from "./register";
 import Navigation from "./../login/navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import Footer from "./../articles/footer";
 import "bootstrap/dist/css/bootstrap.css";
 
 class Login extends Component {
@@ -41,6 +42,9 @@ class Login extends Component {
           >
             Zaloguj jako administrator
           </a>
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     );

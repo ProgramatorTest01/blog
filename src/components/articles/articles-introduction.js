@@ -4,25 +4,26 @@ import ArticleWelcome from "./welcome-articles";
 import Navigation from "./../login/navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default class ArticlesIntro extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: []
+      articles: [],
     };
   }
 
   componentDidMount() {
     axios
       .get("http://localhost:4000/articles/")
-      .then(res => {
+      .then((res) => {
         this.setState({
-          articles: res.data
+          articles: res.data,
         });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }
@@ -52,9 +53,9 @@ export default class ArticlesIntro extends Component {
               <div>{this.dataTable()}</div>
             </article>
           </main>
-          <footer>
-            Artur &amp; Grzegorz 2020. Wszelkie prawa wyłączone :-)
-          </footer>
+          <div>
+            <Footer />
+          </div>
         </div>
       </div>
     );

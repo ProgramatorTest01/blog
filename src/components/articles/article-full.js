@@ -3,6 +3,7 @@ import axios from "axios";
 import Navigation from "./../login/navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default class ArticleFull extends Component {
@@ -51,7 +52,9 @@ export default class ArticleFull extends Component {
             <p>{this.state.content}</p>
           </div>
         </div>
-        <footer>Artur &amp; Grzegorz 2020. Wszelkie prawa wyłączone :-)</footer>
+        <div>
+          <Footer />
+        </div>
       </div>
     );
   }

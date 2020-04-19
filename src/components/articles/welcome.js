@@ -4,6 +4,7 @@ import ArticleWelcome from "./welcome-articles";
 import Navigation from "./../login/navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default class Welcome extends Component {
@@ -63,9 +64,9 @@ export default class Welcome extends Component {
               <div>{this.dataTable()}</div>
             </article>
           </main>
-          <footer>
-            Artur &amp; Grzegorz 2020. Wszelkie prawa wyłączone :-)
-          </footer>
+          <div>
+            <Footer />
+          </div>
         </div>
       </div>
     );

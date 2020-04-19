@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navigation from "./../login/navbar";
+import Footer from "./footer";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.css";
@@ -50,9 +51,9 @@ export default class About extends Component {
               </div>
             </article>
           </main>
-          <footer>
-            Artur &amp; Grzegorz 2020. Wszelkie prawa wyłączone :-)
-          </footer>
+          <div>
+            <Footer />
+          </div>
         </div>
       </div>
     );
