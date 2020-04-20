@@ -9,6 +9,8 @@ export default class Contact extends Component {
   render() {
     return (
       <Container>
+        <div>
+        <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -16,13 +18,16 @@ export default class Contact extends Component {
             </Container>
           </Navbar>
         </header>
+        </Container>
+        </div>
         <section className="mb-4">
           <h2 className="h1-responsive font-weight-bold text-center my-4">
             Kontakt
           </h2>
           <p className="text-center w-responsive mx-auto mb-5">
             Masz pytania? Proszę skontaktuj się ze mną. Z chęcią poznam Twoje
-            zdanie lub opinie o książkach, tym blogu i innych ważnych sprawach.
+            zdanie lub opinie o książkach, tym blogu i innych ważnych sprawach. 
+            Wypełnij tylko fromularz poniżej a na pewno odpowiem. 
           </p>
           <div className="row">
             <div className="col-md-9 mb-md-0 mb-5">

@@ -21,7 +21,9 @@ class Login extends Component {
 
   render() {
     return (
+      <Container>
       <div>
+        <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -29,6 +31,7 @@ class Login extends Component {
             </Container>
           </Navbar>
         </header>
+        </Container>
         <div>
           <Register history={this.props.history} />
           <SignIn history={this.props.history} />
@@ -47,6 +50,7 @@ class Login extends Component {
           <Footer />
         </div>
       </div>
+      </Container>
     );
   }
 }

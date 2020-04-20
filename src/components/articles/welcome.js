@@ -4,6 +4,8 @@ import ArticleWelcome from "./welcome-articles";
 import Navigation from "./../login/navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -35,16 +37,28 @@ export default class Welcome extends Component {
 
     return (
       <React.Fragment>
-        <ArticleWelcome obj={article1} />
-        <ArticleWelcome obj={article2} />
-        <ArticleWelcome obj={article3} />
+        <Container>
+          <Row>
+            <Col> 
+              <ArticleWelcome obj={article1} />
+            </Col>
+            <Col> 
+              <ArticleWelcome obj={article2} />
+            </Col>
+            <Col> 
+              <ArticleWelcome obj={article3} />
+            </Col>   
+          </Row>
+        </Container>
       </React.Fragment>
     );
   }
 
   render() {
     return (
+      <Container>
       <div>
+      <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -52,13 +66,20 @@ export default class Welcome extends Component {
             </Container>
           </Navbar>
         </header>
+      </Container>
         <div className="wrapper">
+          <Container>
           <main>
             <div>
-              <h1>
-                To będzie powitanie i kilka słów o blogu - co to jest, z czym
-                sie je i dlaczego!
-              </h1>
+              <h3>
+                Czy czytać warto, a jeżeli tak, to co?
+              </h3>
+              <p>
+                Czytanie stymuluje umysł, wzbogaca słownictwo (zwłaszcza gdy człowiek jest jeszcze młody), poprawia pamięć i jest po prostu ciekawą rozrywką. Z powyższego wyraźnie wynika że czytać warto. Ale co czytać? Tu niestety nie ma równie prostej odpowiedzi. Coraz łatwiejszy dostęp do literatury oznacza bowiem również coraz łatwiejszy dostęp do książek przedstawiających wąski punkt widzenia, o marnym stylu, przekazujących fałszywe informacje, czy wręcz do pozycji łączących wszystkie te trzy aspekty na raz. Na naszym blogu postaramy się przedstawić zarówno książki które warto przeczytać, jak i te których należy unikać i za każdym razem postaramy sie to obiektywnie uargumentować.
+              </p>
+              <p>
+                Zapraszamy Artur & Grzegorz
+              </p>
             </div>
             <article>
               <div>{this.dataTable()}</div>
@@ -67,8 +88,10 @@ export default class Welcome extends Component {
           <div>
             <Footer />
           </div>
+          </Container>
         </div>
       </div>
+      </Container>
     );
   }
 }

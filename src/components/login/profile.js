@@ -28,6 +28,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
+        <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -35,6 +36,7 @@ class Profile extends Component {
             </Container>
           </Navbar>
         </header>
+        </Container>
         <div className="container">
           <div className="jumbotron mt-5">
             <div className="col-sm-8 mx-auto">
@@ -64,3 +66,4 @@ class Profile extends Component {
 }
 
 export default Profile;
+

@@ -6,56 +6,42 @@ import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default class About extends Component {
+
   render() {
     return (
-      <div>
-        <header className="App-header">
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navigation />
-            </Container>
-          </Navbar>
-        </header>
+      <Container>
+        <div>
+          <Container>
+          <header className="App-header">
+            <Navbar bg="dark" variant="dark">              
+              <Navigation/>
+            </Navbar>
+          </header>
+          </Container>
+
         <div className="wrapper">
+          <Container>
           <main>
             <div>
-              <h1>O autorze bloga!</h1>
+              <Container>  
+                <h1>O autorach bloga!</h1>
+              </Container>            
             </div>
             <article>
-              <div>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Voluptate, corporis nostrum aliquid, doloribus deserunt iure
-                voluptatum quaerat provident magnam sequi ea non nulla earum
-                maiores perferendis porro nisi assumenda laboriosam perspiciatis
-                repellat. Nesciunt, perspiciatis unde. Ducimus, eligendi!
-                Ratione, dolore aut quaerat dolor nulla dolores. Odio reiciendis
-                laborum rerum dolorum voluptatum magnam quis magni! Dolor animi
-                quod eius obcaecati debitis nihil hic tenetur, iste in assumenda
-                sapiente minima nemo, consequuntur, voluptate distinctio nulla
-                atque iusto incidunt vitae! Dolorum possimus provident unde quo
-                et sed expedita neque rerum nobis in quis praesentium, quia
-                necessitatibus omnis soluta architecto amet atque officiis rem
-                illum laboriosam explicabo. Minus, consequatur? Consequuntur
-                aliquid nihil odio recusandae, dignissimos at tenetur blanditiis
-                neque aperiam? Modi dolorem voluptates alias quod earum
-                necessitatibus optio dolores distinctio quidem, quam amet est
-                sint explicabo commodi quaerat cum voluptate repellendus quos
-                vel quasi a. Eos eum corporis architecto maiores beatae
-                quibusdam amet id recusandae exercitationem at, quas harum vel
-                cumque dolore magnam ea officiis sunt maxime? Impedit
-                perspiciatis deleniti mollitia nesciunt culpa neque quisquam
-                alias at commodi ullam quae quos debitis totam, provident
-                recusandae non sunt modi quas fuga soluta sed laboriosam.
-                Deleniti exercitationem aliquid, impedit reiciendis dignissimos
-                corrupti. Deleniti fugiat quos exercitationem impedit.
-              </div>
+              <Container>
+                <p>
+                  To my. Artur i Grzegorz. Jesteśmy początkującymi programistami. Na kursie programowania postawiono nam wydawałoby sie typowe zadanie w ramach pracy domowej. Stworzenie bloga na dowolny temat. Gdy postanowiliśmy znaleźć jakiś temat wspólny dla nas obu, szybko okazało się że są to książki. Wydawałoby się temat oklepany i nudny. O nie! Kolejny blog o książkach. Ale czy na pewno? Czy w dzisiejszych czasach pełnych teorii spiskowych, fakenewsów, w czasach w których o rzetelną informację niezwykle trudno, rzetelnie oceniający różne publikacje blog jest aby na pewno zbędny, wtórny i nieciekawy? My uważamy że nie! Za zadanie postawiliśmy sobie nie tylko napisanie kodu i ostylowanie strony o niczym. Postanowiliśmy zrobić rasowy blog od A do Z w którym oprócz zadań z zakresu programowania i pisania stron, bedzie także rzetelna i wartościowa treść. Tak oto powstał: "Czytać warto! Blog o książkach i nie tylko...". Zapraszamy!
+                </p>
+              </Container>
             </article>
           </main>
+          </Container>
           <div>
             <Footer />
           </div>
         </div>
       </div>
+      </Container>
     );
   }
 }

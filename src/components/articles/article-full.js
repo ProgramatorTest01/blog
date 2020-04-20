@@ -37,7 +37,9 @@ export default class ArticleFull extends Component {
 
   render() {
     return (
+      <Container>
       <div>
+        <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -52,10 +54,12 @@ export default class ArticleFull extends Component {
             <p>{this.state.content}</p>
           </div>
         </div>
-        <div>
-          <Footer />
-        </div>
+          <div>
+            <Footer />
+          </div>
+        </Container>
       </div>
+      </Container>
     );
   }
 }

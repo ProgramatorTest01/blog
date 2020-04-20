@@ -4,6 +4,11 @@ import { Link, withRouter } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import FormControl from "react-bootstrap/FormControl";
+import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
 
 class Navigation extends Component {
@@ -39,15 +44,19 @@ class Navigation extends Component {
 
     return (
       <div className="App">
+        <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
+              <Row>
+              <Col>              
               <Navbar.Brand>
                 <Link to={"/"} className="nav-link">
                   Czytać warto! Blog o książkach i nie tylko...
                 </Link>
               </Navbar.Brand>
-
+              </Col>
+              <Col>  
               <Nav className="justify-content-end">
                 <Nav>
                   <Link to={"/"} className="nav-link">
@@ -73,12 +82,23 @@ class Navigation extends Component {
                   ? userLink
                   : loginRegLink}
               </Nav>
+              </Col>
+              <Col>
+              <Form inline>
+                <FormControl type="text" placeholder="Szukaj" className="mr-sm-2" />
+                <Button variant="light">Szukaj</Button>
+                
+              </Form>
+              </Col>
+              </Row>
             </Container>
           </Navbar>
         </header>
+        </Container>
       </div>
     );
   }
 }
 
 export default withRouter(Navigation);
+

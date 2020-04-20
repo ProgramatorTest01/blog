@@ -36,7 +36,9 @@ export default class ArticlesIntro extends Component {
 
   render() {
     return (
+      <Container>
       <div>
+        <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -57,7 +59,9 @@ export default class ArticlesIntro extends Component {
             <Footer />
           </div>
         </div>
+        </Container>
       </div>
+      </Container>
     );
   }
 }

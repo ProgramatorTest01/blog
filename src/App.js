@@ -25,7 +25,6 @@ class App extends Component {
         <div className="App">
           <Container>
             <Row>
-              <Col md={12}>
                 <div className="wrapper">
                   <Switch>
                     <Route exact path="/" component={Welcome} />
@@ -41,7 +40,6 @@ class App extends Component {
                     <Route path="/admin" component={AdminLogin} />
                   </Switch>
                 </div>
-              </Col>
             </Row>
           </Container>
         </div>
