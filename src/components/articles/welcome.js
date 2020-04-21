@@ -70,17 +70,19 @@ export default class Welcome extends Component {
         <div className="wrapper">
           <Container>
           <main>
+          <Container>
             <div>
               <h3>
                 Czy czytać warto, a jeżeli tak, to co?
               </h3>
               <p>
-                Czytanie stymuluje umysł, wzbogaca słownictwo (zwłaszcza gdy człowiek jest jeszcze młody), poprawia pamięć i jest po prostu ciekawą rozrywką. Z powyższego wyraźnie wynika że czytać warto. Ale co czytać? Tu niestety nie ma równie prostej odpowiedzi. Coraz łatwiejszy dostęp do literatury oznacza bowiem również coraz łatwiejszy dostęp do książek przedstawiających wąski punkt widzenia, o marnym stylu, przekazujących fałszywe informacje, czy wręcz do pozycji łączących wszystkie te trzy aspekty na raz. Na naszym blogu postaramy się przedstawić zarówno książki które warto przeczytać, jak i te których należy unikać i za każdym razem postaramy sie to obiektywnie uargumentować.
+                Czytanie stymuluje umysł, wzbogaca słownictwo (zwłaszcza gdy człowiek jest jeszcze młody), poprawia pamięć i jest po prostu ciekawą rozrywką. Z powyższego wyraźnie wynika że czytać warto. Ale co czytać? Tu niestety nie ma równie prostej odpowiedzi. Coraz łatwiejszy dostęp do literatury oznacza bowiem również coraz łatwiejszy dostęp do książek przedstawiających wąski punkt widzenia, o marnym stylu, przekazujących fałszywe informacje, czy wręcz do pozycji łączących wszystkie te trzy aspekty na raz. Na naszym blogu postaramy się przedstawić zarówno książki które warto przeczytać, jak i te których należy unikać i za każdym razem postaramy sie obiektywnie uargumentować nasze zdanie.
               </p>
               <p>
                 Zapraszamy Artur & Grzegorz
               </p>
             </div>
+            </Container>
             <article>
               <div>{this.dataTable()}</div>
             </article>

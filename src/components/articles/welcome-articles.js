@@ -12,7 +12,7 @@ export default class ArticleWelcome extends Component {
           to={"/one-article/" + this.props.obj._id}
         >
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Img variant="top" src="grafikajotpegie.jpg/100px180"/>
           <Card.Body>
             <Card.Title>
               <h2>{this.props.obj.title}</h2>

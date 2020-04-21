@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import Navigation from "./../login/navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -20,109 +24,73 @@ export default class Contact extends Component {
         </header>
         </Container>
         </div>
+        <Container>
         <section className="mb-4">
           <h2 className="h1-responsive font-weight-bold text-center my-4">
             Kontakt
           </h2>
           <p className="text-center w-responsive mx-auto mb-5">
-            Masz pytania? Proszę skontaktuj się ze mną. Z chęcią poznam Twoje
-            zdanie lub opinie o książkach, tym blogu i innych ważnych sprawach. 
-            Wypełnij tylko fromularz poniżej a na pewno odpowiem. 
+            Masz pytania? Proszę skontaktuj się z nami. Z chęcią poznamy Twoje
+            zdanie lub opinie o książkach, tym blogu, programowaniu, pisaniu stron i innych ważnych sprawach. Wystarczy tylko że wypełnisz formularz poniżej. 
           </p>
-          <div className="row">
-            <div className="col-md-9 mb-md-0 mb-5">
-              <form id="contact-form" name="contact-form" method="POST">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="md-form mb-0">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                      ></input>
-                      <label htmlFor="name" className="">
-                        Twoje imię
-                      </label>
-                    </div>
-                  </div>
+          <Form>
+            <Form.Row>
+              <Form.Group as={Col}>
+                <Form.Label>Imię</Form.Label>
+                <Form.Control placeholder="Twoje Imię" />
+              </Form.Group>
+              <Form.Group as={Col}>
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" placeholder="Twój e-mail" />
+              </Form.Group>
+            </Form.Row>
 
-                  <div className="col-md-6">
-                    <div className="md-form mb-0">
-                      <input
-                        type="text"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                      ></input>
-                      <label htmlFor="email" className="">
-                        Twój email
-                      </label>
-                    </div>
-                  </div>
-                </div>
+            <Form.Group>
+              <Form.Label>Temat wiadomości</Form.Label>
+              <Form.Control placeholder="Krótki opis o czym będzie Twoja wiadomość" />
+            </Form.Group>
 
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="md-form mb-0">
-                      <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        className="form-control"
-                      ></input>
-                      <label htmlFor="subject" className="">
-                        Temat
-                      </label>
-                    </div>
-                  </div>
-                </div>
+            <Form.Group>
+              <Form.Label>Treść wiadomości</Form.Label>
+              <Form.Control as="textarea" rows="8" placeholder="Pełna treść Twojej wiadomości" />
+            </Form.Group>
 
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="md-form">
-                      <textarea
-                        type="text"
-                        id="message"
-                        name="message"
-                        rows="2"
-                        className="form-control md-textarea"
-                      ></textarea>
-                      <label htmlFor="message">Twoja wiadomość</label>
-                    </div>
-                  </div>
-                </div>
-              </form>
-
-              <div className="text-center text-md-left">
-                <a href="/" className="btn btn-primary">
-                  {" "}
-                  Wyślij
-                </a>
-              </div>
-              <div className="status"></div>
-            </div>
-
-            <div className="col-md-3 text-center">
-              <ul className="list-unstyled mb-0">
-                <li>
-                  <i className="fas fa-map-marker-alt fa-2x"></i>
-                  <p>Warszawa</p>
-                </li>
-
-                <li>
-                  <i className="fas fa-phone mt-4 fa-2x"></i>
-                  <p>+ 48 22 234 56 89</p>
-                </li>
-
-                <li>
-                  <i className="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>kontakt@blog.com</p>
-                </li>
-              </ul>
-            </div>
-          </div>
+            <Button variant="primary" type="submit">
+              Prześlij
+            </Button>
+          </Form>
         </section>
+        </Container>
+        <Container>
+          <Row>
+          <Col>
+            <p>
+              Do zaliczenia pracy musimy też zamieścić mapkę z Google Maps. Skoro to blog o książkach zamieszczamy w takim razie adres Biblioteki Narodowej i korzystamy z okazji by zachęcić Was do jej odwiedzenia. Czy wiecie że:
+            </p>
+            <p>
+              Zbiory Biblioteki Narodowej sięgają 8.8 miliona jednostek.
+            </p>
+            <p>
+              Wydawcy mają obowiązek przekazać do Biblioteki Narodowej w ramach egzemplarza obowiązkowego 2 egzemplarze każdej publikacji ukazującej się na terenie Polski.
+            </p>
+            <p>
+              Informatorium to miejsce, gdzie każdy czytelnik Biblioteki Narodowej może prosić o radę, w jaki sposób szukać potrzebnych materiałów lub informacji na dany temat oraz jak się poruszać po Bibliotece. 
+            </p>
+            <p>
+              Nie musisz być w Warszawie by korzystać z jej zbiorów. Możesz zamówić sobie książkę do biblioteki publicznej blisko Twojego miejsca zamieszkania w ramach wypożyczenia międzybibliotecznego, lub skorzystać z zasobów internetowych.
+            </p>
+
+          </Col>
+          <Col>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9778.520578558164!2d21.0034221!3d52.2137684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9140378313c7f946!2sBiblioteka%20Narodowa!5e0!3m2!1spl!2spl!4v1587470631700!5m2!1spl!2spl" width="450" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </Col>
+          </Row>
+          <Row>
+            <Col>
+            Jak widać warto korzystać z zasobów Biblioteki Narodowej, do czego serdecznie Wszystkich zapraszamy. Na pewno znajdziecie tam też wszystkie recenzowane przez nas książki.
+            </Col> 
+          </Row>
+        </Container>
         <div>
           <Footer />
         </div>

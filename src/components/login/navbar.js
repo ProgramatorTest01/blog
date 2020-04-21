@@ -65,7 +65,7 @@ class Navigation extends Component {
                 </Nav>
                 <Nav>
                   <Link to={"/about"} className="nav-link">
-                    O mnie
+                    O nas
                   </Link>
                 </Nav>
                 <Nav>
