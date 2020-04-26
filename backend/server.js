@@ -12,13 +12,13 @@ mongoose.Promise = global.Promise;
 mongoose
   .connect(dbConfig.db, {
     useUnifiedTopology: true,
-    useNewUrlParser: true
+    useNewUrlParser: true,
   })
   .then(
     () => {
       console.log("Connected data!");
     },
-    error => {
+    (error) => {
       console.log("Error during connection attempt: " + error);
     }
   );
@@ -27,7 +27,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
-    extended: true
+    extended: true,
   })
 );
 app.use(cors());

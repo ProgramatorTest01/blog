@@ -14,6 +14,7 @@ export default class CreateArticle extends Component {
     this.onChangeArticleAuthor = this.onChangeArticleAuthor.bind(this);
     this.onChangeArticleContent = this.onChangeArticleContent.bind(this);
     this.onChangeArticleInfo = this.onChangeArticleInfo.bind(this);
+    this.onChangeArticlePhoto = this.onChangeArticlePhoto.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
@@ -21,6 +22,7 @@ export default class CreateArticle extends Component {
       author: "",
       content: "",
       info: "",
+      photo: "",
     };
   }
 
@@ -40,6 +42,10 @@ export default class CreateArticle extends Component {
     this.setState({ info: e.target.value });
   }
 
+  onChangeArticlePhoto(e) {
+    this.setState({ photo: e.target.value });
+  }
+
   onSubmit(e) {
     e.preventDefault();
 
@@ -48,6 +54,7 @@ export default class CreateArticle extends Component {
       author: this.state.author,
       content: this.state.content,
       info: this.state.info,
+      photo: this.state.photo,
     };
 
     axios
@@ -59,6 +66,7 @@ export default class CreateArticle extends Component {
       author: "",
       content: "",
       info: "",
+      photo: "",
     });
   }
 
@@ -107,6 +115,16 @@ export default class CreateArticle extends Component {
                 type="text"
                 value={this.state.info}
                 onChange={this.onChangeArticleInfo}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="Photo">
+              <Form.Label>Okładka książki</Form.Label>
+              <Form.Control
+                type="text"
+                value={this.state.photo}
+                placeholder="Wprowadź nazwę pliku z rozszerzeniem"
+                onChange={this.onChangeArticlePhoto}
               />
             </Form.Group>
 

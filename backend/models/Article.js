@@ -15,7 +15,7 @@ let articleSchema = new schema(
     info: {
       type: String,
     },
-    picture: {
+    photo: {
       type: String,
     },
     created: {

@@ -14,6 +14,7 @@ export default class EditArticle extends Component {
     this.onChangeArticleAuthor = this.onChangeArticleAuthor.bind(this);
     this.onChangeArticleContent = this.onChangeArticleContent.bind(this);
     this.onChangeArticleInfo = this.onChangeArticleInfo.bind(this);
+    this.onChangeArticlePhoto = this.onChangeArticlePhoto.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
@@ -21,6 +22,7 @@ export default class EditArticle extends Component {
       author: "",
       content: "",
       info: "",
+      photo: "",
     };
   }
 
@@ -40,6 +42,10 @@ export default class EditArticle extends Component {
     this.setState({ info: e.target.value });
   }
 
+  onChangeArticlePhoto(e) {
+    this.setState({ photo: e.target.value });
+  }
+
   componentDidMount() {
     axios
       .get(
@@ -52,6 +58,7 @@ export default class EditArticle extends Component {
           author: res.data.author,
           content: res.data.content,
           info: res.data.info,
+          photo: res.data.photo,
         });
       })
       .catch((error) => {
@@ -67,6 +74,7 @@ export default class EditArticle extends Component {
       author: this.state.author,
       content: this.state.content,
       info: this.state.info,
+      photo: this.state.photo,
     };
 
     axios
@@ -131,6 +139,15 @@ export default class EditArticle extends Component {
                 type="text"
                 value={this.state.info}
                 onChange={this.onChangeArticleInfo}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="Photo">
+              <Form.Label>Okładka książki</Form.Label>
+              <Form.Control
+                type="text"
+                value={this.state.photo}
+                onChange={this.onChangeArticlePhoto}
               />
             </Form.Group>
 
