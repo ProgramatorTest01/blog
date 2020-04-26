@@ -28,8 +28,10 @@ export default class ArticlesIntro extends Component {
       });
   }
 
-  dataTable() {
-    return this.state.articles.map((res, i) => {
+  dataArticles() {
+    let dataArticles = this.state.articles.sort(this.state.articles.created);
+    dataArticles.reverse();
+    return dataArticles.map((res, i) => {
       return <ArticleWelcome obj={res} key={i} />;
     });
   }
@@ -37,30 +39,30 @@ export default class ArticlesIntro extends Component {
   render() {
     return (
       <Container>
-      <div>
-        <Container>
-        <header className="App-header">
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navigation />
-            </Container>
-          </Navbar>
-        </header>
-        <div className="wrapper">
-          <main>
-            <div>
-              <h1>Artykuły - recenzje! Wprowadzenie!</h1>
+        <div>
+          <Container>
+            <header className="App-header">
+              <Navbar bg="dark" variant="dark">
+                <Container>
+                  <Navigation />
+                </Container>
+              </Navbar>
+            </header>
+            <div className="wrapper">
+              <main>
+                <div>
+                  <h1>Artykuły - recenzje! Wprowadzenie!</h1>
+                </div>
+                <article>
+                  <div>{this.dataArticles()}</div>
+                </article>
+              </main>
+              <div>
+                <Footer />
+              </div>
             </div>
-            <article>
-              <div>{this.dataTable()}</div>
-            </article>
-          </main>
-          <div>
-            <Footer />
-          </div>
+          </Container>
         </div>
-        </Container>
-      </div>
       </Container>
     );
   }
