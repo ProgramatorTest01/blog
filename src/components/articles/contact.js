@@ -25,11 +25,11 @@ export default class Contact extends Component {
         </Container>
         </div>
         <Container>
-        <section className="mb-4">
-          <h2 className="h1-responsive font-weight-bold text-center my-4">
+        <section>
+          <h2>
             Kontakt
           </h2>
-          <p className="text-center w-responsive mx-auto mb-5">
+          <p>
             Masz pytania? Proszę skontaktuj się z nami. Z chęcią poznamy Twoje
             zdanie lub opinie o książkach, tym blogu, programowaniu, pisaniu stron i innych ważnych sprawach. Wystarczy tylko że wypełnisz formularz poniżej. 
           </p>
@@ -37,22 +37,22 @@ export default class Contact extends Component {
             <Form.Row>
               <Form.Group as={Col}>
                 <Form.Label>Imię</Form.Label>
-                <Form.Control placeholder="Twoje Imię" />
+                <Form.Control required placeholder="Twoje Imię" />
               </Form.Group>
               <Form.Group as={Col}>
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Twój e-mail" />
+                <Form.Control required type="email" placeholder="Twój e-mail" />
               </Form.Group>
             </Form.Row>
 
             <Form.Group>
               <Form.Label>Temat wiadomości</Form.Label>
-              <Form.Control placeholder="Krótki opis o czym będzie Twoja wiadomość" />
+              <Form.Control required placeholder="Krótki opis o czym będzie Twoja wiadomość" />
             </Form.Group>
 
             <Form.Group>
               <Form.Label>Treść wiadomości</Form.Label>
-              <Form.Control as="textarea" rows="8" placeholder="Pełna treść Twojej wiadomości" />
+              <Form.Control required as="textarea" rows="8" placeholder="Pełna treść Twojej wiadomości" />
             </Form.Group>
 
             <Button variant="primary" type="submit">
@@ -82,7 +82,7 @@ export default class Contact extends Component {
 
           </Col>
           <Col>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9778.520578558164!2d21.0034221!3d52.2137684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9140378313c7f946!2sBiblioteka%20Narodowa!5e0!3m2!1spl!2spl!4v1587470631700!5m2!1spl!2spl" width="450" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9778.520578558164!2d21.0034221!3d52.2137684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9140378313c7f946!2sBiblioteka%20Narodowa!5e0!3m2!1spl!2spl!4v1587470631700!5m2!1spl!2spl" title="Biblioteka Narodowa" width="450" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </Col>
           </Row>
           <Row>
