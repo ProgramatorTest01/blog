@@ -73,7 +73,7 @@ export default class Welcome extends Component {
             <Container>
               <main>
                 <Container>
-                  <div>
+                  <div class="textblocks">
                     <h3>Czy czytać warto, a jeżeli tak, to co?</h3>
                     <p>
                       Czytanie stymuluje umysł, wzbogaca słownictwo (zwłaszcza

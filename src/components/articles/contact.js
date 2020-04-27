@@ -22,10 +22,10 @@ export default class Contact extends Component {
             </Container>
           </Navbar>
         </header>
-        </Container>
+      </Container>
         </div>
         <Container>
-        <section>
+        <section class="textblocks">
           <h2>
             Kontakt
           </h2>
@@ -62,6 +62,7 @@ export default class Contact extends Component {
         </section>
         </Container>
         <Container>
+          <div class="textblocks">
           <Row>
           <Col>
             <p>
@@ -90,6 +91,7 @@ export default class Contact extends Component {
             Jak widać warto korzystać z zasobów Biblioteki Narodowej, do czego serdecznie Wszystkich zapraszamy. Na pewno znajdziecie tam też wszystkie recenzowane przez nas książki.
             </Col> 
           </Row>
+          </div>
         </Container>
         <div>
           <Footer />

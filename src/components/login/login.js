@@ -36,7 +36,7 @@ class Login extends Component {
           </Navbar>
         </header>
         </Container>
-        <div>
+        <div class="textblocks">
         <Container>
           <Row>
             <Col xs={12} sm={8}>

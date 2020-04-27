@@ -1,5 +1,13 @@
+body {background-color: #DED2A8; 
+      background-image: url(https://c2.peakpx.com/wallpaper/934/101/208/books-structure-texture-background-wallpaper-preview.jpg) }
+
 html {
   overflow-y: scroll;
+}
+
+.textblocks {
+  background-color: lightgrey;
+  padding: 15px 15px 15px 15px
 }
 
 .wrapper {

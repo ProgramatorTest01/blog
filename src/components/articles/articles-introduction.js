@@ -50,7 +50,7 @@ export default class ArticlesIntro extends Component {
             </header>
             <div className="wrapper">
               <main>
-                <div>
+                <div class="textblocks">
                   <h1>Artykuły - recenzje! Wprowadzenie!</h1>
                 </div>
                 <article>
