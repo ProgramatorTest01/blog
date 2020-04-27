@@ -47,17 +47,23 @@ export default class ArticleFull extends Component {
             </Container>
           </Navbar>
         </header>
-        <div className="wrapper">
+        <Container>
+        <main className="wrapper">
+        <Container>
+        <div class="textblocks">
           <div className="article-box">
             <h2>{this.state.title}</h2>
             <h3>{this.state.author}</h3>
             <p>{this.state.content}</p>
           </div>
         </div>
-          <div>
-            <Footer />
-          </div>
         </Container>
+        </main>
+        </Container>
+        </Container>
+      </div>
+      <div>
+        <Footer />
       </div>
       </Container>
     );

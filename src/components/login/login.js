@@ -36,6 +36,10 @@ class Login extends Component {
           </Navbar>
         </header>
         </Container>
+        <Container>
+        <div className="wrapper">  
+        <main>
+        <Container>
         <div class="textblocks">
         <Container>
           <Row>
@@ -57,6 +61,10 @@ class Login extends Component {
           </Row>
         </Container>
         </div>
+        </Container>
+        </main>
+        </div>
+        </Container>
         <div>
           <Footer />
         </div>

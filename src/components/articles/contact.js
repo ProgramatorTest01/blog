@@ -22,8 +22,11 @@ export default class Contact extends Component {
             </Container>
           </Navbar>
         </header>
-      </Container>
+        </Container>
         </div>
+        <Container>
+        <div className="wrapper">  
+        <main>
         <Container>
         <section class="textblocks">
           <h2>
@@ -61,8 +64,8 @@ export default class Contact extends Component {
           </Form>
         </section>
         </Container>
-        <Container>
-          <div class="textblocks">
+        <Container className="wrapper">
+          <div className="textblocks">
           <Row>
           <Col>
             <p>
@@ -92,6 +95,9 @@ export default class Contact extends Component {
             </Col> 
           </Row>
           </div>
+        </Container>
+        </main>
+        </div>
         </Container>
         <div>
           <Footer />

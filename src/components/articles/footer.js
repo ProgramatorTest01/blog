@@ -7,7 +7,7 @@ export default class Footer extends Component {
     return (
       <Container>
       <div>
-        <footer>
+        <footer className="wrapper">
           <Card bg="warning" border="danger" style= {{ width: 'auto' }}>
             <Card.Body>
               <Card.Text>

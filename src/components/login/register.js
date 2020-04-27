@@ -86,7 +86,7 @@ class Register extends Component {
           <Form noValidate onSubmit={this.onSubmit}> 
             <Form.Group value={this.state.first_name} onChange={this.onChange}>
               <Form.Label>Imię</Form.Label>
-              <Form.Control placeholder="Twoje Imię" />
+              <Form.Control type="text" placeholder="Twoje Imię" />
               {this.state.formErrors.first_name.length > 0 && (
                   <span className="errorMessage text-danger">
                     {this.state.formErrors.first_name}
@@ -95,7 +95,7 @@ class Register extends Component {
             </Form.Group>
             <Form.Group value={this.state.last_name} onChange={this.onChange}>
               <Form.Label>Nazwisko</Form.Label>
-              <Form.Control placeholder="Twoje Nazwisko" />
+              <Form.Control type="text" placeholder="Twoje Nazwisko" />
               {this.state.formErrors.last_name.length > 0 && (
                   <span className="errorMessage text-danger">
                     {this.state.formErrors.last_name}
@@ -113,7 +113,7 @@ class Register extends Component {
             </Form.Group>
             <Form.Group value={this.state.password} onChange={this.onChange}>
               <Form.Label>Hasło</Form.Label>
-              <Form.Control placeholder="Twoje hasło" />
+              <Form.Control type="password" placeholder="Twoje hasło" />
               {this.state.formErrors.password.length > 0 && (
                   <span className="errorMessage text-danger">
                     {this.state.formErrors.password}

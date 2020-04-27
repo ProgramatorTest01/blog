@@ -49,19 +49,21 @@ export default class ArticlesIntro extends Component {
               </Navbar>
             </header>
             <div className="wrapper">
+              <Container>
               <main>
                 <div class="textblocks">
                   <h1>Artykuły - recenzje! Wprowadzenie!</h1>
                 </div>
-                <article>
+                <article className="wrapper">
                   <div>{this.dataArticles()}</div>
                 </article>
               </main>
-              <div>
-                <Footer />
-              </div>
+              </Container>
             </div>
           </Container>
+         <div>
+          <Footer />
+          </div>
         </div>
       </Container>
     );

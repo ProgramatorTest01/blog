@@ -97,10 +97,10 @@ export default class Welcome extends Component {
                   <div>{this.dataTable()}</div>
                 </article>
               </main>
-              <div>
-                <Footer />
-              </div>
             </Container>
+          </div>
+          <div>
+            <Footer />
           </div>
         </div>
       </Container>
