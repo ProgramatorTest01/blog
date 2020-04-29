@@ -22,6 +22,7 @@ export default class ArticlesIntro extends Component {
         this.setState({
           articles: res.data,
         });
+        console.log(res.data);
       })
       .catch((error) => {
         console.log(error);
@@ -50,19 +51,19 @@ export default class ArticlesIntro extends Component {
             </header>
             <div className="wrapper">
               <Container>
-              <main>
-                <div class="textblocks">
-                  <h1>Artykuły - recenzje! Wprowadzenie!</h1>
-                </div>
-                <article className="wrapper">
-                  <div>{this.dataArticles()}</div>
-                </article>
-              </main>
+                <main>
+                  <div className="textblocks">
+                    <h1>Artykuły - recenzje! Wprowadzenie!</h1>
+                  </div>
+                  <article className="wrapper">
+                    <div>{this.dataArticles()}</div>
+                  </article>
+                </main>
               </Container>
             </div>
           </Container>
-         <div>
-          <Footer />
+          <div>
+            <Footer />
           </div>
         </div>
       </Container>

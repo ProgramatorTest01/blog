@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 export default class ArticleWelcome extends Component {
   render() {
     return (
-      <div className="article-box" className="wrapper">
+      <div className="article-box wrapper">
         <Link
           className="text-primary"
           to={"/one-article/" + this.props.obj._id}

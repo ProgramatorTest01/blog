@@ -18,19 +18,19 @@ class AdminLogin extends Component {
             </Container>
           </Navbar>
         </header>
-        <div class="textblocks">
-        <Container>
-          <Row>
-            <Col>
-              <h1>Zarejestruj się jako administrator</h1>
-              <Register history={this.props.history} />
-            </Col>
-            <Col>
-              <h1>Zaloguj się jako administrator</h1>
-              <SignIn history={this.props.history} />
-            </Col>
-          </Row>
-        </Container>
+        <div className="textblocks">
+          <Container>
+            <Row>
+              <Col>
+                <h1>Zarejestruj się jako administrator</h1>
+                <Register history={this.props.history} />
+              </Col>
+              <Col>
+                <h1>Zaloguj się jako administrator</h1>
+                <SignIn history={this.props.history} />
+              </Col>
+            </Row>
+          </Container>
         </div>
       </div>
     );

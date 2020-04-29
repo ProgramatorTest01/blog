@@ -36,6 +36,11 @@ class NavigationAdmin extends Component {
             </Link>
           </Nav>
           <Nav>
+            <Link to={"/comments-list"} className="nav-link">
+              Lista komentarzy
+            </Link>
+          </Nav>
+          <Nav>
             <a href="/" onClick={this.logOut.bind(this)} className="nav-link">
               Wyloguj
             </a>

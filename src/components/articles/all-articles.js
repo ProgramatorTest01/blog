@@ -7,16 +7,16 @@ import CardGroup from "react-bootstrap/CardGroup";
 export default class ArticleAll extends Component {
   render() {
     return (
-      <div className="article-box" className="wrapper">
+      <div className="article-box wrapper">
         <Link
           className="text-primary"
           to={"/one-article/" + this.props.obj._id}
         >
-          <CardGroup>  
+          <CardGroup>
             <Card xs={4} sm={4}>
               <Card.Img src={this.props.obj.photo} />
-            </Card> 
-            <Card xs={8} sm={8}>  
+            </Card>
+            <Card xs={8} sm={8}>
               <Card.Body>
                 <Card.Title>
                   <h2>{this.props.obj.title}</h2>

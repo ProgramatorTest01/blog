@@ -16,6 +16,8 @@ import Contact from "./components/articles/contact";
 import ArticleFull from "./components/articles/article-full";
 import ArticlesIntro from "./components/articles/articles-introduction";
 import AdminLogin from "./components/admin/admin-login";
+import AddComment from "./components/comments/add-comment";
+import CommentsList from "./components/comments/comments-list.component";
 
 class App extends Component {
   render() {
@@ -24,21 +26,23 @@ class App extends Component {
         <div className="App">
           <Container>
             <Row>
-                <div className="wrapper">
-                  <Switch>
-                    <Route exact path="/" component={Welcome} />
-                    <Route path="/about" component={About} />
-                    <Route path="/create-article" component={CreateArticle} />
-                    <Route path="/edit-article/:id" component={EditArticle} />
-                    <Route path="/one-article/:id" component={ArticleFull} />
-                    <Route path="/article-list" component={ArticleList} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/profile" component={Profile} />
-                    <Route path="/articles" component={ArticlesIntro} />
-                    <Route path="/contact" component={Contact} />
-                    <Route path="/admin" component={AdminLogin} />
-                  </Switch>
-                </div>
+              <div className="wrapper">
+                <Switch>
+                  <Route exact path="/" component={Welcome} />
+                  <Route path="/about" component={About} />
+                  <Route path="/create-article" component={CreateArticle} />
+                  <Route path="/create-comment" component={AddComment} />
+                  <Route path="/edit-article/:id" component={EditArticle} />
+                  <Route path="/one-article/:id" component={ArticleFull} />
+                  <Route path="/article-list" component={ArticleList} />
+                  <Route path="/comments-list" component={CommentsList} />
+                  <Route path="/login" component={Login} />
+                  <Route path="/profile" component={Profile} />
+                  <Route path="/articles" component={ArticlesIntro} />
+                  <Route path="/contact" component={Contact} />
+                  <Route path="/admin" component={AdminLogin} />
+                </Switch>
+              </div>
             </Row>
           </Container>
         </div>

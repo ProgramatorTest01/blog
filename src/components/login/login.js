@@ -10,7 +10,6 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
 
-
 class Login extends Component {
   newWindow(e) {
     e.preventDefault();
@@ -26,49 +25,54 @@ class Login extends Component {
   render() {
     return (
       <Container>
-      <div>
-        <Container>
-        <header className="App-header">
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navigation />
-            </Container>
-          </Navbar>
-        </header>
-        </Container>
-        <Container>
-        <div className="wrapper">  
-        <main>
-        <Container>
-        <div class="textblocks">
-        <Container>
-          <Row>
-            <Col xs={12} sm={8}>
-              <h1>Zarejestruj się</h1>
-              <Register history={this.props.history} />
-            </Col>
-            <Col sm={4}>
-              <h1>Zaloguj się</h1>
-              <SignIn history={this.props.history} />
-            </Col>
-          </Row>
-          <Row>
-            <Col>    
-              <Button onClick={this.newWindow.bind(this)} variant="dark" href="/admin" block >
-              Zaloguj jako administrator
-              </Button>
-            </Col>
-          </Row>
-        </Container>
-        </div>
-        </Container>
-        </main>
-        </div>
-        </Container>
         <div>
-          <Footer />
+          <Container>
+            <header className="App-header">
+              <Navbar bg="dark" variant="dark">
+                <Container>
+                  <Navigation />
+                </Container>
+              </Navbar>
+            </header>
+          </Container>
+          <Container>
+            <div className="wrapper">
+              <main>
+                <Container>
+                  <div className="textblocks">
+                    <Container>
+                      <Row>
+                        <Col xs={12} sm={8}>
+                          <h1>Zarejestruj się</h1>
+                          <Register history={this.props.history} />
+                        </Col>
+                        <Col sm={4}>
+                          <h1>Zaloguj się</h1>
+                          <SignIn history={this.props.history} />
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col>
+                          <Button
+                            onClick={this.newWindow.bind(this)}
+                            variant="dark"
+                            href="/admin"
+                            block
+                          >
+                            Zaloguj jako administrator
+                          </Button>
+                        </Col>
+                      </Row>
+                    </Container>
+                  </div>
+                </Container>
+              </main>
+            </div>
+          </Container>
+          <div>
+            <Footer />
+          </div>
         </div>
-      </div>
       </Container>
     );
   }

@@ -12,6 +12,7 @@ import "bootstrap/dist/css/bootstrap.css";
 export default class Welcome extends Component {
   constructor(props) {
     super(props);
+    this.dataTable = this.dataTable.bind(this);
     this.state = {
       articles: [],
     };
@@ -73,7 +74,7 @@ export default class Welcome extends Component {
             <Container>
               <main>
                 <Container>
-                  <div class="textblocks">
+                  <div className="textblocks">
                     <h1>Czy czytać warto, a jeżeli tak, to co?</h1>
                     <p>
                       Czytanie stymuluje umysł, wzbogaca słownictwo (zwłaszcza

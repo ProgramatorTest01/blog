@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { register } from "./userFunction";
 import { formValid } from "./userFunction";
 import { emailRegex } from "./userFunction";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+// import Form from "react-bootstrap/Form";
+// import Button from "react-bootstrap/Button";
 
 class Register extends Component {
   constructor() {
@@ -134,88 +134,87 @@ class Register extends Component {
 
 export default Register;*/
 
-render() {
-  return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6 mt-5 mx-auto">
-          <form noValidate onSubmit={this.onSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Imię</label>
-              <input
-                type="text"
-                className="form-control"
-                name="first_name"
-                placeholder="Enter your first name"
-                value={this.state.first_name}
-                onChange={this.onChange}
-              />
-              {this.state.formErrors.first_name.length > 0 && (
-                <span className="errorMessage text-danger">
-                  {this.state.formErrors.first_name}
-                </span>
-              )}
-            </div>
-            <div className="form-group">
-              <label htmlFor="name">Nazwisko</label>
-              <input
-                type="text"
-                className="form-control"
-                name="last_name"
-                placeholder="Enter your lastname name"
-                value={this.state.last_name}
-                onChange={this.onChange}
-              />
-              {this.state.formErrors.last_name.length > 0 && (
-                <span className="errorMessage text-danger">
-                  {this.state.formErrors.last_name}
-                </span>
-              )}
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                className="form-control"
-                name="email"
-                placeholder="Enter email"
-                value={this.state.email}
-                onChange={this.onChange}
-              />
-              {this.state.formErrors.email.length > 0 && (
-                <span className="errorMessage text-danger">
-                  {this.state.formErrors.email}
-                </span>
-              )}
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">Hasło</label>
-              <input
-                type="password"
-                className="form-control"
-                name="password"
-                placeholder="Password"
-                value={this.state.password}
-                onChange={this.onChange}
-              />
-              {this.state.formErrors.password.length > 0 && (
-                <span className="errorMessage text-danger">
-                  {this.state.formErrors.password}
-                </span>
-              )}
-            </div>
-            <button type="submit" className="btn btn-lg btn-info btn-block">
-              Rejestracja
-            </button>
-            <br></br>
-            <p className="text-danger">{this.state.info}</p>
-          </form>
+  render() {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 mt-5 mx-auto">
+            <form noValidate onSubmit={this.onSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">Imię</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="first_name"
+                  placeholder="Enter your first name"
+                  value={this.state.first_name}
+                  onChange={this.onChange}
+                />
+                {this.state.formErrors.first_name.length > 0 && (
+                  <span className="errorMessage text-danger">
+                    {this.state.formErrors.first_name}
+                  </span>
+                )}
+              </div>
+              <div className="form-group">
+                <label htmlFor="name">Nazwisko</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="last_name"
+                  placeholder="Enter your lastname name"
+                  value={this.state.last_name}
+                  onChange={this.onChange}
+                />
+                {this.state.formErrors.last_name.length > 0 && (
+                  <span className="errorMessage text-danger">
+                    {this.state.formErrors.last_name}
+                  </span>
+                )}
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  name="email"
+                  placeholder="Enter email"
+                  value={this.state.email}
+                  onChange={this.onChange}
+                />
+                {this.state.formErrors.email.length > 0 && (
+                  <span className="errorMessage text-danger">
+                    {this.state.formErrors.email}
+                  </span>
+                )}
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">Hasło</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  name="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.onChange}
+                />
+                {this.state.formErrors.password.length > 0 && (
+                  <span className="errorMessage text-danger">
+                    {this.state.formErrors.password}
+                  </span>
+                )}
+              </div>
+              <button type="submit" className="btn btn-lg btn-info btn-block">
+                Rejestracja
+              </button>
+              <br></br>
+              <p className="text-danger">{this.state.info}</p>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 }
 
 export default Register;
-
