@@ -80,7 +80,7 @@ export default class CreateArticle extends Component {
             </Container>
           </Navbar>
         </header>
-        <div className="form-wrapper">
+        <div className="form-wrapper" class="textblocks">
           <Form onSubmit={this.onSubmit}>
             <Form.Group controlId="Title">
               <Form.Label>Tytuł</Form.Label>

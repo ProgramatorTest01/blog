@@ -4,6 +4,8 @@ import Register from "./admin-register";
 import NavigationAdmin from "./admin-navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 class AdminLogin extends Component {
   render() {
@@ -16,9 +18,19 @@ class AdminLogin extends Component {
             </Container>
           </Navbar>
         </header>
-        <div>
-          <Register history={this.props.history} />
-          <SignIn history={this.props.history} />
+        <div class="textblocks">
+        <Container>
+          <Row>
+            <Col>
+              <h1>Zarejestruj się jako administrator</h1>
+              <Register history={this.props.history} />
+            </Col>
+            <Col>
+              <h1>Zaloguj się jako administrator</h1>
+              <SignIn history={this.props.history} />
+            </Col>
+          </Row>
+        </Container>
         </div>
       </div>
     );

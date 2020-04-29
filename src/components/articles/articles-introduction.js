@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import ArticleWelcome from "./welcome-articles";
+import ArticleAll from "./all-articles";
 import Navigation from "./../login/navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -32,7 +32,7 @@ export default class ArticlesIntro extends Component {
     let dataArticles = this.state.articles.sort(this.state.articles.created);
     dataArticles.reverse();
     return dataArticles.map((res, i) => {
-      return <ArticleWelcome obj={res} key={i} />;
+      return <ArticleAll obj={res} key={i} />;
     });
   }
 

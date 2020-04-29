@@ -72,9 +72,6 @@ class SignIn extends Component {
         <div className="row">
           <div className="col-md-6 mt-5 mx-auto">
             <form noValidate onSubmit={this.onSubmit}>
-              <h1 className="h3 mb-3 font-weight-normal">
-                Zaloguj się jako administrator
-              </h1>
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input

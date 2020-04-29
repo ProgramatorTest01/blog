@@ -43,7 +43,7 @@ export default class ArticleList extends Component {
             </Container>
           </Navbar>
         </header>
-        <div className="table-wrapper">
+        <div className="table-wrapper" class="textblocks">
           <Table striped bordered hover>
             <thead>
               <tr>

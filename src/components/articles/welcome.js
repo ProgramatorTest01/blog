@@ -74,7 +74,7 @@ export default class Welcome extends Component {
               <main>
                 <Container>
                   <div class="textblocks">
-                    <h3>Czy czytać warto, a jeżeli tak, to co?</h3>
+                    <h1>Czy czytać warto, a jeżeli tak, to co?</h1>
                     <p>
                       Czytanie stymuluje umysł, wzbogaca słownictwo (zwłaszcza
                       gdy człowiek jest jeszcze młody), poprawia pamięć i jest

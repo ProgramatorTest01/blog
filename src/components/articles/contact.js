@@ -29,9 +29,9 @@ export default class Contact extends Component {
         <main>
         <Container>
         <section class="textblocks">
-          <h2>
+          <h1>
             Kontakt
-          </h2>
+          </h1>
           <p>
             Masz pytania? Proszę skontaktuj się z nami. Z chęcią poznamy Twoje
             zdanie lub opinie o książkach, tym blogu, programowaniu, pisaniu stron i innych ważnych sprawach. Wystarczy tylko że wypełnisz formularz poniżej. 
