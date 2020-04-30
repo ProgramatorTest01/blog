@@ -10,7 +10,9 @@ import Row from "react-bootstrap/Row";
 class AdminLogin extends Component {
   render() {
     return (
+      <Container>
       <div>
+      <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -32,7 +34,9 @@ class AdminLogin extends Component {
             </Row>
           </Container>
         </div>
+      </Container>
       </div>
+      </Container>
     );
   }
 }

@@ -27,40 +27,43 @@ class Profile extends Component {
 
   render() {
     return (
+      <Container>
       <div>
-        <Container>
-        <header className="App-header">
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navigation />
-            </Container>
-          </Navbar>
-        </header>
-        </Container>
-        <div className="container">
-          <div className="jumbotron mt-5">
-            <div className="col-sm-8 mx-auto">
-              <h1 className="text-center">PROFILE</h1>
-            </div>
-            <table className="table col-md-6 mx-auto">
-              <tbody>
-                <tr>
-                  <td>Fist Name</td>
-                  <td>{this.state.first_name}</td>
-                </tr>
-                <tr>
-                  <td>Last Name</td>
-                  <td>{this.state.last_name}</td>
-                </tr>
-                <tr>
-                  <td>Email</td>
-                  <td>{this.state.email}</td>
-                </tr>
-              </tbody>
-            </table>
+          <Container>
+            <header>
+              <Navbar bg="dark" variant="dark">
+                <Navigation />
+              </Navbar>
+            </header>
+          </Container>
+          <Container>
+          <div className="wrapper">
+          <Container>
+          <div class="textblocks">
+          <h1 className="text-center">Witaj użytkowniku. Twoje dane to:</h1>
+              <br></br>
+              <table className="table col-md-6 mx-auto">
+                <tbody>
+                  <tr>
+                    <td>Imię</td>
+                    <td>{this.state.first_name}</td>
+                  </tr>
+                  <tr>
+                    <td>Nazwisko</td>
+                    <td>{this.state.last_name}</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>{this.state.email}</td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
-        </div>
+          </Container>
+          </div>
+          </Container>
       </div>
+      </Container>
     );
   }
 }

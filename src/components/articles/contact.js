@@ -86,7 +86,7 @@ export default class Contact extends Component {
 
           </Col>
           <Col>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9778.520578558164!2d21.0034221!3d52.2137684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9140378313c7f946!2sBiblioteka%20Narodowa!5e0!3m2!1spl!2spl!4v1587470631700!5m2!1spl!2spl" title="Biblioteka Narodowa" width="450" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9778.520578558164!2d21.0034221!3d52.2137684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9140378313c7f946!2sBiblioteka%20Narodowa!5e0!3m2!1spl!2spl!4v1587470631700!5m2!1spl!2spl" title="Biblioteka Narodowa" width="430" height="430" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </Col>
           </Row>
           <Row>

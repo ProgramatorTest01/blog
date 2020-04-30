@@ -4,8 +4,8 @@ import ArticleWelcome from "./welcome-articles";
 import Navigation from "./../login/navbar";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import CardDeck from "react-bootstrap/CardDeck";
 import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -41,17 +41,17 @@ export default class Welcome extends Component {
     return (
       <React.Fragment>
         <Container>
-          <Row>
-            <Col>
+          <CardDeck>
+            <Card>
               <ArticleWelcome obj={article1} />
-            </Col>
-            <Col>
+            </Card>
+            <Card>
               <ArticleWelcome obj={article2} />
-            </Col>
-            <Col>
+            </Card>
+            <Card>
               <ArticleWelcome obj={article3} />
-            </Col>
-          </Row>
+            </Card>
+          </CardDeck>
         </Container>
       </React.Fragment>
     );
@@ -94,7 +94,7 @@ export default class Welcome extends Component {
                     <p>Zapraszamy Artur & Grzegorz</p>
                   </div>
                 </Container>
-                <article>
+                <article className="wrapper">
                   <div>{this.dataTable()}</div>
                 </article>
               </main>

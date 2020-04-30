@@ -4,8 +4,6 @@ import Footer from "./footer";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.css";
-// import Col from "react-bootstrap/Col";
-// import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 
@@ -15,7 +13,7 @@ export default class About extends Component {
       <Container>
         <div>
           <Container>
-            <header className="App-header">
+            <header>
               <Navbar bg="dark" variant="dark">
                 <Navigation />
               </Navbar>
@@ -25,27 +23,24 @@ export default class About extends Component {
           <div className="wrapper">
             <Container>
               <main>
-                <div>
                   <Container>
                     <article class="textblocks">
                       <h1>O autorach bloga!</h1>
                       <CardGroup>
                         <Card>
-                          <Card.Img src="https://media.quiz.me/quiz/C-T7nfSqKj3q_189x189_2mRPEZPf.jpg" />
+                          <Card.Img src="https://yt3.ggpht.com/a/AGF-l7-15iu1TFhXXwg_Y2BKoEzS_xxYXZdmZSQ2vQ=s900-c-k-c0xffffffff-no-rj-mo"/>
                         </Card>
                         <Card>
-                          <Card.Img src="https://i.ytimg.com/vi/rvaCpTsayDk/mqdefault.jpg" />
-                        </Card>
-                        <Card>
-                          <Card.Text>
-                            <h2>
-                              Z prawej Grzegorz, z lewej Artur... albo na
-                              odwrót...
-                            </h2>
-                            <p>Nie jesteśmy pewni...</p>
-                          </Card.Text>
+                          <Card.Img src="https://i.vimeocdn.com/portrait/34010446_640x640" />  
+                        
                         </Card>
                       </CardGroup>
+                      <br></br>
+                      <h2 >
+                         Z lewej Grzegorz, z prawej Artur... albo na
+                         odwrót...
+                      </h2>
+                      <p>Nie jesteśmy pewni...</p>
                       <br></br>
                       <p>
                         To my. Artur i Grzegorz. Jesteśmy początkującymi
@@ -69,7 +64,6 @@ export default class About extends Component {
                       </p>
                     </article>
                   </Container>
-                </div>
               </main>
             </Container>
             <div>

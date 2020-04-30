@@ -72,14 +72,18 @@ export default class CreateArticle extends Component {
 
   render() {
     return (
+      <Container>
       <div>
-        <header className="App-header">
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <NavigationAdmin />
-            </Container>
-          </Navbar>
-        </header>
+      <Container>    
+      <header className="App-header">
+        <Navbar bg="dark" variant="dark">
+          <Container>
+            <NavigationAdmin />
+          </Container>
+        </Navbar>
+      </header>
+      </Container>
+      <Container>
         <div className="form-wrapper" class="textblocks">
           <Form onSubmit={this.onSubmit}>
             <Form.Group controlId="Title">
@@ -133,7 +137,9 @@ export default class CreateArticle extends Component {
             </Button>
           </Form>
         </div>
+        </Container>
       </div>
+      </Container>
     );
   }
 }

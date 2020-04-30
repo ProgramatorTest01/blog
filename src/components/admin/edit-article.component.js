@@ -96,7 +96,9 @@ export default class EditArticle extends Component {
 
   render() {
     return (
+      <Container>
       <div>
+      <Container>  
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -104,6 +106,7 @@ export default class EditArticle extends Component {
             </Container>
           </Navbar>
         </header>
+        </Container>
         <div className="form-wrapper" class="textblocks">
           <Form onSubmit={this.onSubmit}>
             <Form.Group controlId="Title">
@@ -155,8 +158,9 @@ export default class EditArticle extends Component {
               Edytuj artykuł
             </Button>
           </Form>
-        </div>
+        </div> 
       </div>
+      </Container>
     );
   }
 }

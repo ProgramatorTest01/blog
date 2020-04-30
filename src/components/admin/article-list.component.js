@@ -35,14 +35,18 @@ export default class ArticleList extends Component {
 
   render() {
     return (
+      <Container>
       <div>
+        <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
-            <Container>
-              <NavigationAdmin />
-            </Container>
+          <Container>
+            <NavigationAdmin />
+          </Container>
           </Navbar>
         </header>
+       </Container>
+       <Container>
         <div className="table-wrapper" class="textblocks">
           <Table striped bordered hover>
             <thead>
@@ -57,7 +61,9 @@ export default class ArticleList extends Component {
             <tbody>{this.dataTable()}</tbody>
           </Table>
         </div>
+        </Container>
       </div>
+      </Container>   
     );
   }
 }

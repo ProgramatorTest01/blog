@@ -55,7 +55,7 @@ export default class ArticlesIntro extends Component {
                   <div className="textblocks">
                     <h1>Artykuły - recenzje! Wprowadzenie!</h1>
                   </div>
-                  <article className="wrapper">
+                  <article>
                     <div>{this.dataArticles()}</div>
                   </article>
                 </main>

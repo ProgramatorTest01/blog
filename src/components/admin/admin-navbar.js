@@ -3,6 +3,8 @@ import { Link, withRouter } from "react-router-dom";
 
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -54,11 +56,15 @@ class NavigationAdmin extends Component {
         <header className="App-header">
           <Navbar bg="lightdark" expand="dark">
             <Container>
+              <Row>
+              <Col> 
               <Navbar.Brand>
                 <Link to={"/"} className="nav-link">
                   Czytać warto! Sekcja administratora
                 </Link>
               </Navbar.Brand>
+              </Col>
+              </Row>  
 
               <Nav className="justify-content-end">
                 <Nav>

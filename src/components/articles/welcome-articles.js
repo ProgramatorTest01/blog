@@ -6,12 +6,10 @@ import Button from "react-bootstrap/Button";
 export default class ArticleWelcome extends Component {
   render() {
     return (
-      <div className="article-box wrapper">
-        <Link
-          className="text-primary"
-          to={"/one-article/" + this.props.obj._id}
+      <div className="wrapper">
+        <Link to={"/one-article/" + this.props.obj._id}
         >
-          <Card style={{ width: "18rem" }}>
+          <Card border="light" text="dark" style={{ width: "auto" }}>
             <Card.Img variant="top" src={this.props.obj.photo} />
             <Card.Body>
               <Card.Title>
@@ -19,7 +17,7 @@ export default class ArticleWelcome extends Component {
                 <h3>{this.props.obj.author}</h3>
               </Card.Title>
               <Card.Text>{this.props.obj.info}</Card.Text>
-              <Button variant="primary">Czytaj dalej</Button>
+              <Button variant="dark">Czytaj dalej</Button>
             </Card.Body>
           </Card>
         </Link>

@@ -85,7 +85,7 @@ class Navigation extends Component {
               </Col>
               <Col>
               <Form inline>
-                <FormControl type="text" placeholder="Szukaj" className="mr-sm-2" />
+                <FormControl type="text" placeholder="Szukaj"/>
                 <Button variant="light">Szukaj</Button>
                 
               </Form>

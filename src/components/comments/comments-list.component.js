@@ -35,7 +35,9 @@ export default class CommentsList extends Component {
 
   render() {
     return (
+      <Container>
       <div>
+      <Container>
         <header className="App-header">
           <Navbar bg="dark" variant="dark">
             <Container>
@@ -43,7 +45,11 @@ export default class CommentsList extends Component {
             </Container>
           </Navbar>
         </header>
-        <div className="table-wrapper" class="textblocks">
+        </Container>
+        <Container>
+        <div class="textblocks">
+          <Container>
+          <div>
           <Table striped bordered hover>
             <thead>
               <tr>
@@ -56,8 +62,12 @@ export default class CommentsList extends Component {
             </thead>
             <tbody>{this.dataTable()}</tbody>
           </Table>
+          </div>
+          </Container>
         </div>
+        </Container>
       </div>
+      </Container>
     );
   }
 }
