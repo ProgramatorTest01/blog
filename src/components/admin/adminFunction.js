@@ -1,57 +1,57 @@
 import axios from "axios";
 
-export const register = newUser => {
+export const register = (newUser) => {
   return axios
     .post("http://localhost:4000/admin/register", {
       first_name: newUser.first_name,
       last_name: newUser.last_name,
       email: newUser.email,
-      password: newUser.password
+      password: newUser.password,
     })
-    .then(response => {
+    .then((response) => {
       console.log("Registered");
     });
 };
 
-export const login = user => {
+export const login = (user) => {
   return axios
     .post("http://localhost:4000/admin/login", {
       email: user.email,
-      password: user.password
+      password: user.password,
     })
-    .then(response => {
+    .then((response) => {
       localStorage.setItem("usertoken", response.data);
       return response.data;
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     });
 };
 
-export const getProfile = user => {
+export const getProfile = (user) => {
   return axios
     .get("http://localhost:4000/admin/profile", {
       //headers: { Authorization: ` ${this.getToken()}` }
     })
-    .then(response => {
+    .then((response) => {
       console.log(response);
       return response.data;
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
     });
 };
 
-export const formValid = ({ formErrors, info, ...rest }) => {
+export const formValid = ({ formErrors, infoValid, ...rest }) => {
   let valid = true;
 
   // validate form errors being empty
-  Object.values(formErrors).forEach(val => {
+  Object.values(formErrors).forEach((val) => {
     val.length > 0 && (valid = false);
   });
 
   // validate the form was filled out
-  Object.values(rest).forEach(val => {
+  Object.values(rest).forEach((val) => {
     val === "" && (valid = false);
   });
 

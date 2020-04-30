@@ -6,8 +6,10 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 class Register extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
     this.state = {
       first_name: "",
       last_name: "",
@@ -21,9 +23,6 @@ class Register extends Component {
       },
       info: "",
     };
-
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
   onChange(e) {
@@ -83,55 +82,77 @@ class Register extends Component {
   render() {
     return (
       <div>
-          <Form noValidate onSubmit={this.onSubmit}> 
-            <Form.Group>
-              <Form.Label>Imię</Form.Label>
-              <Form.Control name="first_name" value={this.state.first_name} onChange={this.onChange} type="text" placeholder="Twoje Imię" />
-              {this.state.formErrors.first_name.length > 0 && (
-                  <span className="errorMessage text-danger">
-                    {this.state.formErrors.first_name}
-                  </span>
-                )}
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Nazwisko</Form.Label>
-              <Form.Control name="last_name" value={this.state.last_name} onChange={this.onChange} type="text" placeholder="Twoje Nazwisko" />
-              {this.state.formErrors.last_name.length > 0 && (
-                  <span className="errorMessage text-danger">
-                    {this.state.formErrors.last_name}
-                  </span>
-                )}
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Email</Form.Label>
-              <Form.Control  name="email" value={this.state.email} onChange={this.onChange} type="email" placeholder="Twój e-mail" />
-              {this.state.formErrors.email.length > 0 && (
-                  <span className="errorMessage text-danger">
-                    {this.state.formErrors.email}
-                  </span>
-                )}
-            </Form.Group>
-            <Form.Group >
-              <Form.Label>Hasło</Form.Label>
-              <Form.Control name="password" value={this.state.password} onChange={this.onChange} type="password" placeholder="Twoje hasło" />
-              {this.state.formErrors.password.length > 0 && (
-                  <span className="errorMessage text-danger">
-                    {this.state.formErrors.password}
-                  </span>
-                )}
-            </Form.Group>
+        <Form noValidate onSubmit={this.onSubmit}>
+          <Form.Group>
+            <Form.Label>Imię</Form.Label>
+            <Form.Control
+              name="first_name"
+              value={this.state.first_name}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Twoje Imię"
+            />
+            {this.state.formErrors.first_name.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.first_name}
+              </span>
+            )}
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Nazwisko</Form.Label>
+            <Form.Control
+              name="last_name"
+              value={this.state.last_name}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Twoje Nazwisko"
+            />
+            {this.state.formErrors.last_name.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.last_name}
+              </span>
+            )}
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              name="email"
+              value={this.state.email}
+              onChange={this.onChange}
+              type="email"
+              placeholder="Twój e-mail"
+            />
+            {this.state.formErrors.email.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.email}
+              </span>
+            )}
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Hasło</Form.Label>
+            <Form.Control
+              name="password"
+              value={this.state.password}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Twoje hasło"
+            />
+            {this.state.formErrors.password.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.password}
+              </span>
+            )}
+          </Form.Group>
 
-            <Button variant="primary" type="submit" block>
-              Zarejestruj
-            </Button>
-            <br></br>
-            <p className="text-danger">{this.state.info}</p>
-          </Form>
+          <Button variant="primary" type="submit" block>
+            Zarejestruj
+          </Button>
+          <br></br>
+          <p className="text-danger">{this.state.info}</p>
+        </Form>
       </div>
     );
   }
 }
 
 export default Register;
-
-  

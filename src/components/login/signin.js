@@ -3,11 +3,13 @@ import { login } from "./userFunction";
 import { formValid } from "./userFunction";
 import { emailRegex } from "./userFunction";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button"
+import Button from "react-bootstrap/Button";
 
 class SignIn extends Component {
   constructor() {
     super();
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
     this.state = {
       email: "",
       password: "",
@@ -17,9 +19,6 @@ class SignIn extends Component {
       },
       info: "",
     };
-
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
   onChange(e) {
@@ -71,24 +70,45 @@ class SignIn extends Component {
     return (
       <div>
         <Form noValidate onSubmit={this.onSubmit}>
-            <Form.Group>
-              <Form.Label>Email</Form.Label>
-              <Form.Control name="email" value={this.state.email} onChange={this.onChange} type="email" placeholder="Twój e-mail"  />
-            </Form.Group>
+          <Form.Group>
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              name="email"
+              value={this.state.email}
+              onChange={this.onChange}
+              type="email"
+              placeholder="Twój e-mail"
+            />
+            {this.state.formErrors.email.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.email}
+              </span>
+            )}
+          </Form.Group>
           <Form.Group>
             <Form.Label>Hasło</Form.Label>
-            <Form.Control name="password" value={this.state.password} onChange={this.onChange} type="password" placeholder="Twoje hasło"  />
+            <Form.Control
+              name="password"
+              value={this.state.password}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Twoje hasło"
+            />
+            {this.state.formErrors.password.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.password}
+              </span>
+            )}
           </Form.Group>
           <Button variant="primary" type="submit" block>
-             Zaloguj
+            Zaloguj
           </Button>
-         <br></br>
-         <p className="text-danger">{this.state.info}</p>
-         </Form>
+          <br></br>
+          <p className="text-danger">{this.state.info}</p>
+        </Form>
       </div>
     );
   }
 }
 
 export default SignIn;
-

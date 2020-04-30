@@ -17,9 +17,9 @@ class Register extends Component {
         first_name: "",
         last_name: "",
         email: "",
-        password: ""
+        password: "",
       },
-      info: ""
+      infoValid: "",
     };
 
     this.onChange = this.onChange.bind(this);
@@ -58,26 +58,26 @@ class Register extends Component {
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     };
 
     if (formValid(this.state)) {
-      register(newUser).then(res => {
+      register(newUser).then((res) => {
         this.setState({
-          info: "Administrator został utworzony. Teraz zaloguj się."
+          infoValid: "Administrator został utworzony. Teraz zaloguj się.",
         });
         this.props.history.push(`/admin`);
         this.setState({
           first_name: "",
           last_name: "",
           email: "",
-          password: ""
+          password: "",
         });
       });
     } else {
       this.setState({
-        info:
-          "Formularz rejestracji zawiera puste pola lub błędy. Proszę go poprawić."
+        infoValid:
+          "Formularz rejestracji zawiera puste pola lub błędy. Proszę go poprawić.",
       });
     }
   }
@@ -85,50 +85,74 @@ class Register extends Component {
   render() {
     return (
       <div>
-          <Form noValidate onSubmit={this.onSubmit}> 
-            <Form.Group>
-              <Form.Label>Imię</Form.Label>
-              <Form.Control name="first_name" value={this.state.first_name} onChange={this.onChange} type="text" placeholder="Twoje Imię" />
-              {this.state.formErrors.first_name.length > 0 && (
-                  <span className="errorMessage text-danger">
-                    {this.state.formErrors.first_name}
-                  </span>
-                )}
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Nazwisko</Form.Label>
-              <Form.Control name="last_name" value={this.state.last_name} onChange={this.onChange} type="text" placeholder="Twoje Nazwisko" />
-              {this.state.formErrors.last_name.length > 0 && (
-                  <span className="errorMessage text-danger">
-                    {this.state.formErrors.last_name}
-                  </span>
-                )}
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Email</Form.Label>
-              <Form.Control  name="email" value={this.state.email} onChange={this.onChange} type="email" placeholder="Twój e-mail" />
-              {this.state.formErrors.email.length > 0 && (
-                  <span className="errorMessage text-danger">
-                    {this.state.formErrors.email}
-                  </span>
-                )}
-            </Form.Group>
-            <Form.Group >
-              <Form.Label>Hasło</Form.Label>
-              <Form.Control name="password" value={this.state.password} onChange={this.onChange} type="password" placeholder="Twoje hasło" />
-              {this.state.formErrors.password.length > 0 && (
-                  <span className="errorMessage text-danger">
-                    {this.state.formErrors.password}
-                  </span>
-                )}
-            </Form.Group>
+        <Form noValidate onSubmit={this.onSubmit}>
+          <Form.Group>
+            <Form.Label>Imię</Form.Label>
+            <Form.Control
+              name="first_name"
+              value={this.state.first_name}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Twoje Imię"
+            />
+            {this.state.formErrors.first_name.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.first_name}
+              </span>
+            )}
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Nazwisko</Form.Label>
+            <Form.Control
+              name="last_name"
+              value={this.state.last_name}
+              onChange={this.onChange}
+              type="text"
+              placeholder="Twoje Nazwisko"
+            />
+            {this.state.formErrors.last_name.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.last_name}
+              </span>
+            )}
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              name="email"
+              value={this.state.email}
+              onChange={this.onChange}
+              type="email"
+              placeholder="Twój e-mail"
+            />
+            {this.state.formErrors.email.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.email}
+              </span>
+            )}
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Hasło</Form.Label>
+            <Form.Control
+              name="password"
+              value={this.state.password}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Twoje hasło"
+            />
+            {this.state.formErrors.password.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.password}
+              </span>
+            )}
+          </Form.Group>
 
-            <Button variant="primary" type="submit" block>
-              Zarejestruj
-            </Button>
-            <br></br>
-            <p className="text-danger">{this.state.info}</p>
-          </Form>
+          <Button variant="primary" type="submit" block>
+            Zarejestruj
+          </Button>
+          <br></br>
+          <p className="text-danger">{this.state.infoValid}</p>
+        </Form>
       </div>
     );
   }

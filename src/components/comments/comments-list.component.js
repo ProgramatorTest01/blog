@@ -36,37 +36,37 @@ export default class CommentsList extends Component {
   render() {
     return (
       <Container>
-      <div>
-      <Container>
-        <header className="App-header">
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <NavigationAdmin />
-            </Container>
-          </Navbar>
-        </header>
-        </Container>
-        <Container>
-        <div class="textblocks">
+        <div>
           <Container>
-          <div>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Artykuł</th>
-                <th>Autor</th>
-                <th>Komentarz</th>
-                <th>Data utworzenia</th>
-                <th>Funkcje</th>
-              </tr>
-            </thead>
-            <tbody>{this.dataTable()}</tbody>
-          </Table>
-          </div>
+            <header className="App-header">
+              <Navbar bg="dark" variant="dark">
+                <Container>
+                  <NavigationAdmin />
+                </Container>
+              </Navbar>
+            </header>
+          </Container>
+          <Container>
+            <div className="textblocks">
+              <Container>
+                <div>
+                  <Table striped bordered hover>
+                    <thead>
+                      <tr>
+                        <th>Artykuł</th>
+                        <th>Autor</th>
+                        <th>Komentarz</th>
+                        <th>Data utworzenia</th>
+                        <th>Funkcje</th>
+                      </tr>
+                    </thead>
+                    <tbody>{this.dataTable()}</tbody>
+                  </Table>
+                </div>
+              </Container>
+            </div>
           </Container>
         </div>
-        </Container>
-      </div>
       </Container>
     );
   }

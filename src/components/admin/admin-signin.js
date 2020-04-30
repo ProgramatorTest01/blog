@@ -3,7 +3,7 @@ import { login } from "./adminFunction";
 import { formValid } from "./adminFunction";
 import { emailRegex } from "./adminFunction";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button"
+import Button from "react-bootstrap/Button";
 
 class SignIn extends Component {
   constructor() {
@@ -13,9 +13,9 @@ class SignIn extends Component {
       password: "",
       formErrors: {
         email: "",
-        password: ""
+        password: "",
       },
-      info: ""
+      infoValid: "",
     };
 
     this.onChange = this.onChange.bind(this);
@@ -48,22 +48,22 @@ class SignIn extends Component {
 
     const user = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     };
 
     if (formValid(this.state)) {
-      login(user).then(res => {
+      login(user).then((res) => {
         if (res) {
           this.props.history.push("/article-list");
         }
       });
       this.setState({
         email: "",
-        password: ""
+        password: "",
       });
     } else {
       this.setState({
-        info: "Email lub hasło są błędne. Wprowadź poprawne dane."
+        infoValid: "Email lub hasło są błędne. Wprowadź poprawne dane.",
       });
     }
   }
@@ -72,24 +72,45 @@ class SignIn extends Component {
     return (
       <div>
         <Form noValidate onSubmit={this.onSubmit}>
-            <Form.Group>
-              <Form.Label>Email</Form.Label>
-              <Form.Control name="email" value={this.state.email} onChange={this.onChange} type="email" placeholder="Twój e-mail"  />
-            </Form.Group>
+          <Form.Group>
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+              name="email"
+              value={this.state.email}
+              onChange={this.onChange}
+              type="email"
+              placeholder="Twój e-mail"
+            />
+            {this.state.formErrors.email.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.email}
+              </span>
+            )}
+          </Form.Group>
           <Form.Group>
             <Form.Label>Hasło</Form.Label>
-            <Form.Control name="password" value={this.state.password} onChange={this.onChange} type="password" placeholder="Twoje hasło"  />
+            <Form.Control
+              name="password"
+              value={this.state.password}
+              onChange={this.onChange}
+              type="password"
+              placeholder="Twoje hasło"
+            />
+            {this.state.formErrors.password.length > 0 && (
+              <span className="errorMessage text-danger">
+                {this.state.formErrors.password}
+              </span>
+            )}
           </Form.Group>
           <Button variant="primary" type="submit" block>
-             Zaloguj
+            Zaloguj
           </Button>
-         <br></br>
-         <p className="text-danger">{this.state.info}</p>
-         </Form>
+          <br></br>
+          <p className="text-danger">{this.state.infoValid}</p>
+        </Form>
       </div>
     );
   }
 }
 
 export default SignIn;
-

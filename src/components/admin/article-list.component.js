@@ -36,34 +36,34 @@ export default class ArticleList extends Component {
   render() {
     return (
       <Container>
-      <div>
-        <Container>
-        <header className="App-header">
-          <Navbar bg="dark" variant="dark">
+        <div>
           <Container>
-            <NavigationAdmin />
+            <header className="App-header">
+              <Navbar bg="dark" variant="dark">
+                <Container>
+                  <NavigationAdmin />
+                </Container>
+              </Navbar>
+            </header>
           </Container>
-          </Navbar>
-        </header>
-       </Container>
-       <Container>
-        <div className="table-wrapper" class="textblocks">
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Tytuł</th>
-                <th>Autor</th>
-                <th>Opis</th>
-                <th>Opis skrócony</th>
-                <th>Funkcje</th>
-              </tr>
-            </thead>
-            <tbody>{this.dataTable()}</tbody>
-          </Table>
+          <Container>
+            <div className="table-wrapper textblocks">
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Tytuł</th>
+                    <th>Autor</th>
+                    <th>Opis</th>
+                    <th>Opis skrócony</th>
+                    <th>Funkcje</th>
+                  </tr>
+                </thead>
+                <tbody>{this.dataTable()}</tbody>
+              </Table>
+            </div>
+          </Container>
         </div>
-        </Container>
-      </div>
-      </Container>   
+      </Container>
     );
   }
 }
